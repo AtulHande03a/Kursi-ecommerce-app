@@ -1,0 +1,12 @@
+/*Gear UI component library */
+
+@import url("https://gear-ui.netlify.app/gearUI.css");
+
+/* utils */
+
+@import url("./reset.css");
+@import url("./utils.css");
+
+/* pages styles */
+
+@import url("./homepage.css");

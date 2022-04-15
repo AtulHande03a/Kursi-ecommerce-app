@@ -1,0 +1,20 @@
+:root {
+  --color-primary: #019a94;
+  --color-primary-shade: #f6fff6;
+  --color-secondary: black;
+}
+
+/* gap  */
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+/* align-item */
+
+.align-items-center {
+  align-items: center;
+}
