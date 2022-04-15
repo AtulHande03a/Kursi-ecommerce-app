@@ -2,7 +2,7 @@ import { Footer, Navbar } from "components";
 import { Routes } from "routes/Routes";
 import "./styles/styles.css";
 
-function App() {
+const App = () => {
   return (
     <>
       <Navbar />
@@ -10,6 +10,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;
