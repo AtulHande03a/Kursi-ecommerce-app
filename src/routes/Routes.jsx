@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 // page imports
 import {
   Homepage,
-  Products,
+  ProductListing,
   Cart,
   WishList,
   Login,
@@ -17,7 +17,7 @@ const WebsiteRoutes = () => {
       <Route path="/" element={<Homepage />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/wishlist" element={<WishList />} />
-      <Route path="/products" element={<Products />} />
+      <Route path="/products" element={<ProductListing />} />
       <Route path="/login" element={<Login />} />
       <Route path="/logout" element={<Logout />} />
       <Route path="/signup" element={<SignUp />} />

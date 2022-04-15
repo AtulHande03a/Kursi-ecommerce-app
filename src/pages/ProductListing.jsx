@@ -1,7 +1,16 @@
+import { Filters, Products, ResponsiveFilter } from "components";
 import React from "react";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 export const ProductListing = () => {
   useDocumentTitle("Products | Kursi");
-  return <div>ProductListing</div>;
+  return (
+    <>
+      <ResponsiveFilter />
+      <div class="flex content-center mb-1">
+        <Filters />
+        <Products />
+      </div>
+    </>
+  );
 };
