@@ -1,4 +1,6 @@
-export { Navbar } from "./Navbar";
-export { Hero } from "./Hero";
-export { Categories } from "./Categories";
-export { Footer } from "./Footer";
+import { Navbar } from "./Navbar";
+import { Hero } from "./Hero";
+import { Categories } from "./Categories";
+import { Footer } from "./Footer";
+
+export { Navbar, Hero, Categories, Footer };
