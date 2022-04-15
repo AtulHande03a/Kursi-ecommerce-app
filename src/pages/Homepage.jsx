@@ -3,7 +3,7 @@ import React from "react";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 export const Homepage = () => {
-  useDocumentTitle("Kusri");
+  useDocumentTitle("Kursi");
   return (
     <>
       <Hero />
