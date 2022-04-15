@@ -63,6 +63,28 @@
   max-height: 20rem;
   object-fit: contain;
 }
+
+.category-card {
+  position: relative;
+}
+
+.btn-category {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  opacity: 0;
+}
+
+.btn-category:hover {
+  opacity: 1;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+}
 /* cards  */
 
 .icon-badge {

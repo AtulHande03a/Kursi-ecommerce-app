@@ -1,30 +1,30 @@
+import bedImg from "../assets/images/bed.jpg";
+import sofaImg from "../assets/images/sofa.jpg";
+import chairImg from "../assets/images/chair.jpg";
+import coffeeTableImg from "../assets/images/coffe-table.jpg";
 export const categories = [
   {
     id: 1,
     name: "Bed",
-    image:
-      "https://github.com/AtulHande03a/Ecom-screens/blob/cc056c565e5687442a08aeb6c5b745fd1aca3851/assets/images/bed.jpg",
+    image: bedImg,
     slug: "bed",
   },
   {
     id: 2,
     name: "Sofa Set",
-    image:
-      "https://github.com/AtulHande03a/Ecom-screens/blob/cc056c565e5687442a08aeb6c5b745fd1aca3851/assets/images/sofa.jpg",
+    image: sofaImg,
     slug: "sofa-set",
   },
   {
     id: 3,
     name: "Chair",
-    image:
-      "https://github.com/AtulHande03a/Ecom-screens/blob/cc056c565e5687442a08aeb6c5b745fd1aca3851/assets/images/office-chair.jpg",
+    image: chairImg,
     slug: "chair",
   },
   {
     id: 4,
     name: "Coffee Table",
-    image:
-      "https://github.com/AtulHande03a/Ecom-screens/blob/cc056c565e5687442a08aeb6c5b745fd1aca3851/assets/images/office-chair.jpg",
+    image: coffeeTableImg,
     slug: "coffee-table",
   },
 ];
