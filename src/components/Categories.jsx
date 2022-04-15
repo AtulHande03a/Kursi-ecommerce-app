@@ -1,4 +1,5 @@
 import { categories } from "data.js";
+import { Link } from "react-router-dom";
 
 export const Categories = () => {
   return (
@@ -13,14 +14,16 @@ export const Categories = () => {
             className="my-1 mx-1 flex-column flex-center text-center category-card"
             key={id}
           >
-            <button className="btn-category btn-primary">Shop</button>
-            <a href="./pages/product-list.html">
+            <button className="btn-category btn-primary">
+              <Link to="products">Shop</Link>
+            </button>
+            <div>
               <img
                 className="category-item mb-0-5 img-responsive"
                 src={image}
                 alt={slug}
               />
-            </a>
+            </div>
 
             <p className="text-m font-semibold">{name}</p>
           </div>

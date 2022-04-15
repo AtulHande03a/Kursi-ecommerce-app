@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import hero from "../assets/images/hero.jpg";
 
 export const Hero = () => {
@@ -15,9 +16,9 @@ export const Hero = () => {
       <div className="banner-detail p-0-5 flex-column flex-center">
         <h1 className="banner-heading pb-0-5">Modular Furniture</h1>
         <p className="banner-offer pb-0-5">Extra 30% off</p>
-        <a href="./pages/product-list.html" class="btn btn-primary">
+        <Link to="products" class="btn btn-primary">
           Buy Now
-        </a>
+        </Link>
       </div>
     </section>
   );
