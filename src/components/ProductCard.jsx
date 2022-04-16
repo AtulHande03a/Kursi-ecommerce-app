@@ -24,13 +24,10 @@ export const ProductCard = ({ product }) => {
             alt={categoryName}
           />
           <span className="text-badge">Best Seller</span>
-          {/* <i className="fa-regular fa-heart icon-badge"></i> */}
+
           <div className="card-rating flex flex-center">
             <span className="card-rating-star">{rating}</span>
             <i className="fa-solid fa-star rating-star-icon"></i>
-          </div>
-          <div className="add-to-cart-action orange-btn">
-            <button className="add-to-cart-btn">Add To Cart</button>
           </div>
         </section>
         <section className="px-0-5 mb-0-5">
