@@ -1,27 +1,31 @@
 import { v4 as uuid } from "uuid";
 
-/**
- * Category Database can be added here.
- * You can add category of your wish with different attributes
- * */
+//import images
+import { beds, chair, coffeeTable, sofa } from "assets/images";
 
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    categoryName: "Beds",
+    src: beds,
+    altName: "Bed",
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    categoryName: "Chair",
+    src: chair,
+    altName: "Chair",
   },
   {
     _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    categoryName: "Sofa",
+    src: sofa,
+    altName: "Sofa",
+  },
+  {
+    _id: uuid(),
+    categoryName: "Coffee Table",
+    src: coffeeTable,
+    altName: "Coffee table",
   },
 ];
