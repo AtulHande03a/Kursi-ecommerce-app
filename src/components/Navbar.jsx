@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/kursi-logo.png";
 
 export const Navbar = () => {
@@ -6,12 +7,12 @@ export const Navbar = () => {
     <header className="header py-0-5 z-1">
       <nav className="flex align-center space-between wrap navbar-container">
         <section className="brandlogo-wrapper pl-1 flex flex-center">
-          <a href="./index.html">
+          <Link to="/">
             <img className="brandlogo-img py-0-5" src={logo} alt="Kursi" />
-          </a>
-          <a href="./index.html">
+          </Link>
+          <Link to="/">
             <h1 className="font-bold brandname-text">Kursi</h1>
-          </a>
+          </Link>
         </section>
 
         <section className="navbar-search flex space-between">
@@ -27,36 +28,44 @@ export const Navbar = () => {
         </section>
         <section className="navbar-icons flex space-between px-1">
           <div className="navbar-icon text-l flex-column align-center text-center p-0-5">
-            <a href="./pages/product-list.html">
-              <i className="fa-solid fa-store badge-icon"></i>
-            </a>
-            <p className="text-sm">Products</p>
+            <Link to="products">
+              <div className="flex flex-center mb-0-5">
+                <i className="fa-solid fa-store badge-icon"></i>
+              </div>
+              <p className="text-sm">Products</p>
+            </Link>
           </div>
           <div className="navbar-icon text-l flex-column align-center p-0-5">
-            <a href="./pages/cart.html">
-              <i className="fa-solid fa-cart-shopping badge-icon">
-                <span className="number-badge icon-badge-position font-size-icon primary-badge-clr border-white">
-                  2
-                </span>
-              </i>
-            </a>
-            <p className="text-sm">Cart</p>
+            <Link to="cart">
+              <div className="flex flex-center mb-0-5">
+                <i className="fa-solid fa-cart-shopping badge-icon">
+                  <span className="number-badge icon-badge-position font-size-icon primary-badge-clr border-white">
+                    2
+                  </span>
+                </i>
+              </div>
+              <p className="text-sm">Cart</p>
+            </Link>
           </div>
           <div className="navbar-icon text-l flex-column align-center p-0-5">
-            <a href="./pages/wishlist.html">
-              <i className="fa-solid fa-heart badge-icon">
-                <span className="number-badge icon-badge-position font-size-icon primary-badge-clr border-white">
-                  4
-                </span>
-              </i>
-            </a>
-            <p className="text-sm">Wishlist</p>
+            <Link to="wishlist">
+              <div className="flex flex-center mb-0-5">
+                <i className="fa-solid fa-heart badge-icon ">
+                  <span className="number-badge icon-badge-position font-size-icon primary-badge-clr border-white">
+                    4
+                  </span>
+                </i>
+              </div>
+              <p className="text-sm">Wishlist</p>
+            </Link>
           </div>
           <div className="navbar-icon text-l flex-column align-center text-center p-0-5">
-            <a href="./pages/signin.html">
-              <i className="fa-solid fa-user badge-icon"></i>
-            </a>
-            <p className="text-sm">Login</p>
+            <Link to="login">
+              <div className="flex flex-center mb-0-5">
+                <i className="fa-solid fa-user badge-icon"></i>
+              </div>
+              <p className="text-sm">Login</p>
+            </Link>
           </div>
         </section>
       </nav>

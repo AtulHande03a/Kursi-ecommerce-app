@@ -1,7 +1,7 @@
 import { Homepage } from "./Homepage";
 import { Cart } from "./Cart";
 
-import { Products } from "./Products";
+import { ProductListing } from "./ProductListing";
 
 import { Login } from "./Login";
 import { SignUp } from "./SignUp";
@@ -10,4 +10,4 @@ import { WishList } from "./WishList";
 
 import { Logout } from "./Logout";
 
-export { Homepage, Cart, Products, WishList, Login, Logout, SignUp };
+export { Homepage, Cart, ProductListing, WishList, Login, Logout, SignUp };
