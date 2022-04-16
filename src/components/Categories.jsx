@@ -1,4 +1,3 @@
-// import { categories } from "data.js";
 import { Link } from "react-router-dom";
 import { useCategory } from "contexts/category-context";
 
