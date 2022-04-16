@@ -1,5 +1,7 @@
 import { v4 as uuid } from "uuid";
 
+import { sofa1, sofa2, sofa3, sofa4, sofa5 } from "assets/productImages";
+
 /**
  * Product Database can be added here.
  * You can add products of your wish with different attributes
@@ -15,19 +17,19 @@ export const products = [
     rating: 4.5,
     brandName: "Trevi Furniture",
     discount: 53,
-    src: "https://ii1.pepperfry.com/media/catalog/product/b/a/800x400/bali-3-seater-sofa-in-blue-colour-by-trevi-furniture-bali-3-seater-sofa-in-blue-colour-by-trevi-furn-5kqqc0.jpg",
+    image: sofa1,
     shipsIn: 2,
   },
   {
     _id: uuid(),
-    name: "Dreamer (72x36) Foam 8 Inch Single Size Sofa Cum Foldable Mattress",
+    name: "Niki 3 Seater Sofa In Yellow Colour",
     discountPrice: 6999,
     originalPrice: 8999,
     categoryName: "sofa",
     rating: 4,
     brandName: "Springtek",
     discount: 22,
-    src: "https://ii1.pepperfry.com/media/catalog/product/v/i/800x880/vista-single-size--72x36--hd-foam--mattress-by-springtek-vista-single-size--72x36--hd-foam--mattress-omsw1x.jpg",
+    image: sofa2,
     shipsIn: 3,
   },
   {
@@ -39,7 +41,7 @@ export const products = [
     rating: 4.5,
     brandName: "Seventh Heaven",
     discount: 36,
-    src: "https://ii1.pepperfry.com/media/catalog/product/f/l/568x284/florida-mj71-wooden-sofa-cum-bed-in-sky-blue-colour-by-seventh-heaven-florida-mj71-wooden-sofa-cum-b-0irj3x.jpg",
+    image: sofa3,
     shipsIn: 4,
   },
   {
@@ -51,7 +53,7 @@ export const products = [
     rating: 5,
     brandName: "Urban Living",
     discount: 32,
-    src: "https://ii1.pepperfry.com/media/catalog/product/d/a/568x284/darwin-3-seater-sofa-in-blue-colour-in-urban-living-darwin-3-seater-sofa-in-blue-colour-in-urban-liv-kcpjct.jpg",
+    image: sofa4,
     shipsIn: 4,
   },
   {
@@ -63,7 +65,7 @@ export const products = [
     rating: 1.5,
     brandName: "Wakefit",
     discount: 32,
-    src: "https://ii1.pepperfry.com/media/catalog/product/s/n/800x400/snoozer-three-seater-sofa-in-omega-grey-colour-by-wakefit-snoozer-three-seater-sofa-in-omega-grey-co-em15io.jpg",
+    image: sofa5,
     shipsIn: 4,
   },
 ];

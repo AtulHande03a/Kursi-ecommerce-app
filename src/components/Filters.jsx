@@ -45,7 +45,7 @@ export const Filters = () => {
                   value="four-star"
                   checked
                 />
-                <label for="four-star">4 stars and above</label>
+                <label htmlFor="four-star">4 stars and above</label>
               </li>
               <li className="pt-1">
                 <input
@@ -54,7 +54,7 @@ export const Filters = () => {
                   name="rating"
                   value="three-star"
                 />
-                <label for="three-star">3 stars and above</label>
+                <label htmlFor="three-star">3 stars and above</label>
               </li>
               <li className="pt-1">
                 <input
@@ -63,7 +63,7 @@ export const Filters = () => {
                   name="rating"
                   value="two-star"
                 />
-                <label for="three-star">2 stars and above</label>
+                <label htmlFor="three-star">2 stars and above</label>
               </li>
             </ul>
           </div>
@@ -73,15 +73,15 @@ export const Filters = () => {
             <ul className="text-sm">
               <li className="pt-1">
                 <input type="checkbox" id="bed" name="bed" checked />
-                <label for="bed">Beds</label>
+                <label htmlFor="bed">Beds</label>
               </li>
               <li className="pt-1">
                 <input type="checkbox" id="sofa" name="sofa" checked />
-                <label for="sofa">Sofa</label>
+                <label htmlFor="sofa">Sofa</label>
               </li>
               <li className="pt-1">
                 <input type="checkbox" id="chair" name="chair" checked />
-                <label for="chair">Office Chair</label>
+                <label htmlFor="chair">Office Chair</label>
               </li>
             </ul>
           </div>
@@ -98,7 +98,7 @@ export const Filters = () => {
                 value="high-to-low"
                 checked
               />
-              <label for="high-to-low">Price High to Low</label>
+              <label htmlFor="high-to-low">Price High to Low</label>
             </li>
             <li className="pt-1">
               <input
@@ -107,7 +107,7 @@ export const Filters = () => {
                 name="sort-by"
                 value="low-to-high"
               />
-              <label for="low-to-high">Price Low to High</label>
+              <label htmlFor="low-to-high">Price Low to High</label>
             </li>
           </ul>
         </div>

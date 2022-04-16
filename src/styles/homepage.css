@@ -87,6 +87,12 @@
 }
 /* cards  */
 
+.card-image {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
 .icon-badge {
   color: var(--white);
 }
@@ -97,15 +103,27 @@
   color: var(--color-secondary);
 }
 
-.card-buy-btn {
+.card-cart-btn {
   border: 2px solid var(--color-primary);
   background-color: var(--color-primary);
   color: var(--color-secondary);
   cursor: pointer;
 }
 
-.card-buy-btn:hover {
+.card-cart-btn:hover {
   background-color: var(--color-primary-shade);
+  color: var(--color-secondary);
+}
+
+.card-wishlist-btn {
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary-shade);
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.card-wishlist-btn:hover {
+  background-color: var(--color-primary);
   color: var(--color-secondary);
 }
 
