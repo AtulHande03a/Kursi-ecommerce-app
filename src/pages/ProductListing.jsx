@@ -7,7 +7,7 @@ export const ProductListing = () => {
   return (
     <>
       <ResponsiveFilter />
-      <div className="flex content-center mb-1">
+      <div className="flex  mb-1">
         <Filters />
         <Products />
       </div>

@@ -12,8 +12,9 @@ export const Products = () => {
   console.log(sortedProducts, "sortedproducts");
   console.log(filterProducts(productList, filterState), "func");
   return (
-    <main className="main-wrapper flex wrap p-0-5 ml-1 mt-1">
-      {loading && <h2>"Loading.."</h2>}
+    <main className="main-wrapper-product flex wrap p-0-5 ml-1 mt-1">
+      {!loading && sortedProducts.length === 0 && <h2>NO MATCHING PRODUCTS</h2>}
+      {loading && <h2 className="text-center">"Loading.."</h2>}
       {sortedProducts.map((product) => {
         return <ProductCard key={product._id} product={product} />;
       })}

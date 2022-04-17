@@ -1,8 +1,11 @@
+import { useCart } from "contexts/cart-context";
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/kursi-logo.png";
 
 export const Navbar = () => {
+  const { cartState } = useCart();
+
   return (
     <header className="header py-0-5 z-1">
       <nav className="flex align-center space-between wrap navbar-container">
@@ -39,9 +42,11 @@ export const Navbar = () => {
             <Link to="cart">
               <div className="flex flex-center mb-0-5">
                 <i className="fa-solid fa-cart-shopping badge-icon">
-                  <span className="number-badge icon-badge-position font-size-icon primary-badge-clr border-white">
-                    2
-                  </span>
+                  {cartState.cartItems.length !== 0 && (
+                    <span className="number-badge icon-badge-position font-size-icon primary-badge-clr border-white">
+                      {cartState.cartItems.length}
+                    </span>
+                  )}
                 </i>
               </div>
               <p className="text-sm">Cart</p>

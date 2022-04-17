@@ -68,7 +68,7 @@ export const Filters = () => {
                 From :<span className="font-semi">5000</span>
               </span>
               <span className="text-sm">
-                To :<span className="font-semi">80000</span>
+                To :<span className="font-semi">{price}</span>
               </span>
             </div>
           </div>

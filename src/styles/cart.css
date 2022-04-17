@@ -1,0 +1,282 @@
+/* horizontal card */
+
+.card-horizontal {
+  max-width: 60vw;
+  max-height: fit-content;
+  width: 100%;
+  height: 100%;
+  background-color: var(--card-bg);
+  position: relative;
+  box-shadow: var(--dark-shadow);
+  margin: 2rem;
+}
+
+.horizontal-card-image {
+  max-width: 25vw;
+  max-height: fit-content;
+}
+
+.card-description {
+  flex: 1;
+}
+
+.horizontal-card-title {
+  width: 80%;
+  overflow: hidden;
+}
+
+.horizontal-card-brand {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}
+
+.hr-icon-container {
+  position: absolute;
+  top: 1rem;
+  right: 0.5rem;
+}
+
+.horizontal-icon-badge {
+  float: right;
+  color: var(--black);
+  font-size: 1.76rem;
+  cursor: pointer;
+}
+
+.rating-warranty-wrap {
+  display: block;
+}
+
+.rating-wrapper {
+  display: inline-block;
+  width: 114px;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.icon-size {
+  font-size: 1rem;
+}
+
+.warranty-text {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  vertical-align: middle;
+  letter-spacing: 1.1px;
+}
+
+.offer-price {
+  margin-bottom: 12px;
+}
+
+.offer-price-amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-right: 0.75rem;
+  letter-spacing: 1.3px;
+}
+
+.offer-price-discount {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.save-price {
+  font-size: 1rem;
+}
+
+.save-price-amount {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.save-price-discount {
+  display: inline-block;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.horizontal-btn-action {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-add-btn {
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.card-add-btn:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.card-buy-btn {
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.card-buy-btn:hover {
+  background-color: var(--color-primary);
+  color: var(--white);
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-action-buttons {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  gap: 3rem;
+}
+
+.quantity-action {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-float {
+  padding: 0.4rem;
+  background-color: var(--gray);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-action {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity {
+  padding: 0.1rem 0.8rem;
+  background-color: var(--gray);
+}
+
+.remove-action {
+  background-color: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.cart-checkout {
+  position: sticky;
+  top: 10rem;
+  min-width: 25rem;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+  align-self: flex-start;
+  background-color: var(--card-bg);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: var(--light-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkout-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkout-list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-price {
+  font-weight: 600;
+}
+
+.checkout-list :nth-child(2) > .checkout-price {
+  color: var(--color-primary);
+}
+
+#increment-btn {
+  width: initial;
+}
+#decrement-btn {
+  width: initial;
+}
+
+.disabled {
+  color: var(--light-grey);
+}
+
+.enabled {
+  color: var(--light-white);
+}
+
+.empty-cart-text {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .main-container-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .main-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    align-items: center;
+  }
+
+  .horizontal-image-container {
+    display: none;
+  }
+
+  .card-horizontal {
+    width: 100vw;
+  }
+  .text-badge {
+    display: none;
+  }
+  .card-description {
+    width: fit-content;
+    gap: 0.5rem;
+  }
+
+  .card-action-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .cart-checkout {
+    display: block;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+  }
+}
