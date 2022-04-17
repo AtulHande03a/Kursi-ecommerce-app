@@ -6,7 +6,7 @@ import { useDocumentTitle } from "../hooks/useDocumentTitle";
 export const Cart = () => {
   useDocumentTitle("Cart | Kursi");
   return (
-    <div class="flex mb-1 gap-2 main-container-cart">
+    <div className="flex mb-1 gap-2 main-container-cart">
       <CartItems />
       <CartSummary />
     </div>

@@ -26,7 +26,7 @@ export const CartSummary = () => {
           <>
             <h3>Price Details</h3>
             <hr />
-            <ul clasNames="checkout-list text-m">
+            <ul clasName="checkout-list text-m">
               <li className="checkout-list-item">
                 <span>Price ({totalQuantity} items)</span>
                 <span className="checkout-price">₹ {itemsTotal}</span>

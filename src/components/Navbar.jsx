@@ -2,9 +2,11 @@ import { useCart } from "contexts/cart-context";
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/kursi-logo.png";
+import { calcQuantity } from "../utils/cartSummary";
 
 export const Navbar = () => {
   const { cartState } = useCart();
+  const totalQuantity = calcQuantity(cartState.cartItems);
 
   return (
     <header className="header py-0-5 z-1">
@@ -23,7 +25,7 @@ export const Navbar = () => {
             className="w-30 border-none py-0-5 px-1"
             required
             placeholder="Door to happinnes begins with a Search.."
-            type="text"
+            type="search"
           />
           <button className="search-btn">
             <i className="fa-solid fa-magnifying-glass text-l"></i>
@@ -44,7 +46,7 @@ export const Navbar = () => {
                 <i className="fa-solid fa-cart-shopping badge-icon">
                   {cartState.cartItems.length !== 0 && (
                     <span className="number-badge icon-badge-position font-size-icon primary-badge-clr border-white">
-                      {cartState.cartItems.length}
+                      {totalQuantity}
                     </span>
                   )}
                 </i>
@@ -56,9 +58,11 @@ export const Navbar = () => {
             <Link to="wishlist">
               <div className="flex flex-center mb-0-5">
                 <i className="fa-solid fa-heart badge-icon ">
-                  <span className="number-badge icon-badge-position font-size-icon primary-badge-clr border-white">
-                    4
-                  </span>
+                  {cartState.wishlist.length !== 0 && (
+                    <span className="number-badge icon-badge-position font-size-icon primary-badge-clr border-white">
+                      {cartState.wishlist.length}
+                    </span>
+                  )}
                 </i>
               </div>
               <p className="text-sm">Wishlist</p>

@@ -27,7 +27,7 @@ export const Categories = () => {
 
   return (
     <section className="categories-wrapper flex align-center space-around wrap text-center my-2 mx-0-5">
-      <div class="w-100">
+      <div className="w-100">
         <h2 className="categories-list mb-2">Categories</h2>
       </div>
       {categoryData.map((category) => {

@@ -1,10 +1,11 @@
 import { useCart } from "contexts/cart-context";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const ProductCard = ({ product }) => {
   const {
-    cartState: { cartItems },
+    cartState: { cartItems, wishlist },
     cartDispatch,
   } = useCart();
 
@@ -12,11 +13,24 @@ export const ProductCard = ({ product }) => {
 
   const matchedItemInCart = cartItems.find((item) => item._id === product._id);
 
+  const matchedItemInWishlist = wishlist.find(
+    (item) => item._id === product._id
+  );
+
   const addToCart = (product) => {
     cartDispatch({
       type: "ADD_TO_CART",
       payload: product,
     });
+    toast.success(<div>Added to Cart</div>);
+  };
+
+  const addToWishlist = (product) => {
+    cartDispatch({
+      type: "ADD_TO_WISHLIST",
+      payload: product,
+    });
+    toast.success(<div>Added to Wishlist</div>);
   };
 
   const {
@@ -79,9 +93,21 @@ export const ProductCard = ({ product }) => {
             </button>
           )}
 
-          <button className="card-wishlist-btn card-add-btn">
-            Add To Wishlist
-          </button>
+          {matchedItemInWishlist ? (
+            <button
+              className="card-wishlist-btn card-add-btn"
+              onClick={() => navigate("/wishlist")}
+            >
+              Go to Wishlist
+            </button>
+          ) : (
+            <button
+              className="card-wishlist-btn card-add-btn"
+              onClick={() => addToWishlist(product)}
+            >
+              Add To Wishlist
+            </button>
+          )}
         </section>
       </article>
     </>
