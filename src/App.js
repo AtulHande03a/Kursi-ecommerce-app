@@ -1,22 +1,24 @@
 import { Footer, Navbar } from "components";
 import { Routes } from "routes/Routes";
 import "./styles/styles.css";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, Zoom } from "react-toastify";
 
 const App = () => {
+  console.log("hello");
   return (
     <>
-      <ToastContainer
+      {/* <ToastContainer
         theme="colored"
         position="top-right"
+        transition={Zoom}
         autoClose={2000}
         hideProgressBar={false}
-        newestOnTop={false}
+        newestOnTop
         closeOnClick
         rtl={false}
         draggable
         pauseOnHover
-      />
+      /> */}
       <Navbar />
       <Routes />
       <Footer />

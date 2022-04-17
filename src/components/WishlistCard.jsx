@@ -15,7 +15,7 @@ export const WishlistCard = ({ product }) => {
       type: "REMOVE_FROM_WISHLIST",
       payload: id,
     });
-    toast.success(<div>Removed from Wishlist</div>);
+    // toast.success(<div>Removed from Wishlist</div>);
   };
 
   const moveToCart = (product) => {
@@ -39,46 +39,44 @@ export const WishlistCard = ({ product }) => {
         payload: product,
       });
     }
-    toast.success(<div>Moved to Cart</div>);
+    // toast.success(<div>Moved to Cart</div>);
   };
 
   return (
-    <article class="card-verticle flex flex-column mr-2 my-1">
-      <section class="image-container mb-0-5">
+    <article className="card-verticle flex flex-column mr-2 my-1">
+      <section className="image-container mb-0-5">
         <img
           loading="lazy"
-          class="card-image responsive-img"
+          className="card-image responsive-img"
           src={product.image}
           alt={product.category}
         />
 
-        {/* <i class="fa-regular fa-circle-xmark dismiss-btn"></i>
-        <i class="fa-regular fa-heart icon-badge"></i> */}
-        <div class="card-rating flex flex-center">
-          <span class="card-rating-star">{product.rating}</span>
-          <i class="fa-solid fa-star rating-star-icon"></i>
+        <div className="card-rating flex flex-center">
+          <span className="card-rating-star">{product.rating}</span>
+          <i className="fa-solid fa-star rating-star-icon"></i>
         </div>
       </section>
-      <section class="px-0-5 mb-0-5">
-        <p class="card-title font-semi mb-0-5">{product.title}</p>
-        <span class="card-brand font-semi mb-1">{product.brandName}</span>
-        <div class="card-price mb-0-5">
-          <span class="card-price-offer font-bold">₹ {product.price}</span>
-          <span class="card-price-mrp font-semibold">₹ {product.mrp}</span>
+      <section className="px-0-5 mb-0-5">
+        <p className="card-title font-semi mb-0-5">{product.title}</p>
+        <span className="card-brand font-semi mb-1">{product.brandName}</span>
+        <div className="card-price mb-0-5">
+          <span className="card-price-offer font-bold">₹ {product.price}</span>
+          <span className="card-price-mrp font-semibold">₹ {product.mrp}</span>
         </div>
-        <div class="flex mb-0-5">
-          <span class="card-discount-text mb-0-5 font-semibold">
+        <div className="flex mb-0-5">
+          <span className="card-discount-text mb-0-5 font-semibold">
             {product.discount}% off
           </span>
-          <span class="card-shipment font-semi">
+          <span className="card-shipment font-semi">
             Ships in <b> {product.shipsIn} day</b>
           </span>
         </div>
-        <button class="card-buy-btn" onClick={() => moveToCart(product)}>
+        <button className="card-buy-btn" onClick={() => moveToCart(product)}>
           Move to Cart
         </button>
         <button
-          class="card-add-btn"
+          className="card-add-btn"
           onClick={() => removeFromWishlist(product)}
         >
           Remove form Wishlist

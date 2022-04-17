@@ -1,10 +1,13 @@
 import { useCart } from "contexts/cart-context";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 export const CartItemCard = ({ product }) => {
-  const { cartDispatch } = useCart();
+  const {
+    cartState: { wishlist },
+    cartDispatch,
+  } = useCart();
+
   const navigate = useNavigate();
 
   const removeFromCart = (id) => {
@@ -12,7 +15,29 @@ export const CartItemCard = ({ product }) => {
       type: "REMOVE_FROM_CART",
       payload: id,
     });
-    toast.success(<div>Removed from Cart</div>);
+  };
+
+  const matchedItemInWishlist = wishlist.find(
+    (item) => item._id === product._id
+  );
+
+  const moveToWishlist = (product) => {
+    if (matchedItemInWishlist === undefined) {
+      cartDispatch({
+        type: "ADD_TO_WISHLIST",
+        payload: product,
+      });
+      cartDispatch({
+        type: "REMOVE_FROM_CART",
+        payload: product._id,
+      });
+    }
+    if (matchedItemInWishlist) {
+      cartDispatch({
+        type: "REMOVE_FROM_CART",
+        payload: product._id,
+      });
+    }
   };
 
   return (
@@ -81,7 +106,18 @@ export const CartItemCard = ({ product }) => {
           >
             Remove from Cart
           </button>
-          <button className="card-buy-btn ">Move To WishList</button>
+          {matchedItemInWishlist ? (
+            <button className="card-add-btn" onClick={() => navigate("/cart")}>
+              Go to Wishlist
+            </button>
+          ) : (
+            <button
+              className="card-buy-btn"
+              onClick={() => moveToWishlist(product)}
+            >
+              Move To WishList
+            </button>
+          )}
         </div>
       </section>
     </article>
