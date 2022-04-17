@@ -57,7 +57,7 @@ export const CartItemCard = ({ product }) => {
           <span className="save-price-discount">MRP ₹ {product.mrp}</span>
           <span className="price-incl-text"> (Inc of all taxes) </span>
         </div>
-        <div className="card-action-buttons flex justify-center">
+        <div className="card-action-buttons flex justify-center mb-1">
           <div className="quantity-action gap-1">
             <button
               className={`btn-float btn-action ${
