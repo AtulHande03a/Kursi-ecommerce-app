@@ -1,5 +1,6 @@
 import { useCart } from "contexts/cart-context";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const ProductCard = ({ product }) => {
   const {
@@ -7,20 +8,15 @@ export const ProductCard = ({ product }) => {
     cartDispatch,
   } = useCart();
 
+  const navigate = useNavigate();
+
+  const matchedItemInCart = cartItems.find((item) => item._id === product._id);
+
   const addToCart = (product) => {
-    const matchedItem = cartItems.find((item) => item._id === product._id);
-    if (matchedItem === undefined) {
-      cartDispatch({
-        type: "ADD_TO_CART",
-        payload: product,
-      });
-    }
-    if (matchedItem) {
-      cartDispatch({
-        type: "INCREMENT_ITEM",
-        payload: product,
-      });
-    }
+    cartDispatch({
+      type: "ADD_TO_CART",
+      payload: product,
+    });
   };
 
   const {
@@ -67,13 +63,23 @@ export const ProductCard = ({ product }) => {
               Ships in <b> {shipsIn} day</b>
             </span>
           </div>
-          <button
-            className="card-cart-btn card-buy-btn mb-0-5"
-            onClick={addToCart(product)}
-          >
-            Add To Cart
-          </button>
-          <button className="card-wishlist-btn card-buy-btn">
+          {matchedItemInCart ? (
+            <button
+              className="card-cart-btn card-add-btn  mb-0-5"
+              onClick={() => navigate("/cart")}
+            >
+              Go to Cart
+            </button>
+          ) : (
+            <button
+              className="card-cart-btn card-buy-btn mb-0-5"
+              onClick={() => addToCart(product)}
+            >
+              Add To Cart
+            </button>
+          )}
+
+          <button className="card-wishlist-btn card-add-btn">
             Add To Wishlist
           </button>
         </section>

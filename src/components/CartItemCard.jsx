@@ -1,5 +1,6 @@
 import { useCart } from "contexts/cart-context";
 import React from "react";
+import { toast } from "react-toastify";
 
 export const CartItemCard = ({ product }) => {
   const { cartDispatch } = useCart();
@@ -9,6 +10,7 @@ export const CartItemCard = ({ product }) => {
       type: "REMOVE_FROM_CART",
       payload: id,
     });
+    toast.success(<div>Removed from Cart</div>);
   };
 
   return (
@@ -25,24 +27,11 @@ export const CartItemCard = ({ product }) => {
         <h4 className="horizontal-card-title font-regular mb-0-5">
           {product.title}
         </h4>
-        {/* <div class="hr-icon-container hide">
-          <i class="fa-regular fa-heart horizontal-icon-badge"></i>
-        </div> */}
 
         <span className="horizontal-card-brand font-bold">
           {product.brandName}
         </span>
-        {/* <span class="text-badge">Best Seller</span> */}
-        {/* <div class="rating-warranty-wrap mt-1 mb-1-5">
-          <div class="rating-wrapper">
-            <i class="fa-solid fa-star rating-star-icon icon-size"></i>
-            <i class="fa-solid fa-star rating-star-icon icon-size"></i>
-            <i class="fa-solid fa-star rating-star-icon icon-size"></i>
-            <i class="fa-solid fa-star rating-star-icon icon-size"></i>
-            <i class="fa-solid fa-star rating-star-icon icon-size"></i>
-          </div>
-          <div class="warranty-text">36 Month's Warranty</div>
-        </div> */}
+
         <div className="hr-card-price mb-1">
           <div className="offer-price">
             <span className="offer-price-amount">₹ {product.price}</span>
@@ -52,8 +41,6 @@ export const CartItemCard = ({ product }) => {
           </div>
         </div>
         <div className="save-price mb-1">
-          {/*  */}
-          {/* <span class="save-price-amount">Save ₹ {product.mrp}</span> */}
           <span className="save-price-discount">MRP ₹ {product.mrp}</span>
           <span className="price-incl-text"> (Inc of all taxes) </span>
         </div>
@@ -84,16 +71,15 @@ export const CartItemCard = ({ product }) => {
               <i className="fa-solid fa-plus text-m"></i>
             </button>
           </div>
-          {/* <button class="remove-action">Remove</button> */}
         </div>
         <div className="horizontal-btn-action">
           <button
-            className="card-add-btn mb-1 hide"
+            className="card-add-btn mb-1 "
             onClick={() => removeFromCart(product._id)}
           >
             Remove from Cart
           </button>
-          <button className="card-buy-btn hide">Move To WishList</button>
+          <button className="card-buy-btn ">Move To WishList</button>
         </div>
       </section>
     </article>

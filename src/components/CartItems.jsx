@@ -7,7 +7,7 @@ export const CartItems = () => {
   const { cartItems } = cartState;
 
   return (
-    <main class="main-wrapper p-0-5 ml-1">
+    <main className="main-wrapper p-0-5 ml-1">
       {cartItems.map((product) => {
         return <CartItemCard key={product._id} product={product} />;
       })}
