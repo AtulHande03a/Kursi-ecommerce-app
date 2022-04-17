@@ -12,9 +12,11 @@ const ProductProvider = ({ children }) => {
       setLoading(true);
       const res = await axios.get("./api/products");
       setProductList((_prev) => res.data.products);
+
       setLoading(false);
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
 

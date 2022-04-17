@@ -3,11 +3,11 @@ import React from "react";
 export const ProductCard = ({ product }) => {
   const {
     image,
-    categoryName,
+    category,
     rating,
-    discountPrice,
-    originalPrice,
-    name,
+    price,
+    mrp,
+    title,
     brandName,
     discount,
     shipsIn,
@@ -21,7 +21,7 @@ export const ProductCard = ({ product }) => {
             loading="lazy"
             className="card-image responsive-img"
             src={image}
-            alt={categoryName}
+            alt={category}
           />
           <span className="text-badge">Best Seller</span>
 
@@ -31,15 +31,11 @@ export const ProductCard = ({ product }) => {
           </div>
         </section>
         <section className="px-0-5 mb-0-5">
-          <p className="card-title font-semi mb-0-5">{name}</p>
+          <p className="card-title font-semi mb-0-5">{title}</p>
           <span className="card-brand font-semi mb-1">{brandName}</span>
           <div className="card-price mb-0-5">
-            <span className="card-price-offer font-bold">
-              ₹ {discountPrice}
-            </span>
-            <span className="card-price-mrp font-semibold">
-              ₹ {originalPrice}
-            </span>
+            <span className="card-price-offer font-bold">₹ {price}</span>
+            <span className="card-price-mrp font-semibold">₹ {mrp}</span>
           </div>
           <div className="flex mb-0-5">
             <span className="card-discount-text mb-0-5 font-semibold">
