@@ -1,9 +1,11 @@
 import { useCart } from "contexts/cart-context";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export const CartItemCard = ({ product }) => {
   const { cartDispatch } = useCart();
+  const navigate = useNavigate();
 
   const removeFromCart = (id) => {
     cartDispatch({
