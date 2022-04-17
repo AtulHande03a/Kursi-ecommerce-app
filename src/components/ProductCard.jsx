@@ -1,6 +1,28 @@
+import { useCart } from "contexts/cart-context";
 import React from "react";
 
 export const ProductCard = ({ product }) => {
+  const {
+    cartState: { cartItems },
+    cartDispatch,
+  } = useCart();
+
+  const addToCart = (product) => {
+    const matchedItem = cartItems.find((item) => item._id === product._id);
+    if (matchedItem === undefined) {
+      cartDispatch({
+        type: "ADD_TO_CART",
+        payload: product,
+      });
+    }
+    if (matchedItem) {
+      cartDispatch({
+        type: "INCREMENT_ITEM",
+        payload: product,
+      });
+    }
+  };
+
   const {
     image,
     category,
@@ -45,7 +67,10 @@ export const ProductCard = ({ product }) => {
               Ships in <b> {shipsIn} day</b>
             </span>
           </div>
-          <button className="card-cart-btn card-buy-btn mb-0-5">
+          <button
+            className="card-cart-btn card-buy-btn mb-0-5"
+            onClick={addToCart(product)}
+          >
             Add To Cart
           </button>
           <button className="card-wishlist-btn card-buy-btn">
