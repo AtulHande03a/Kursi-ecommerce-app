@@ -16,7 +16,7 @@ export const WishList = () => {
         <h2 className="text-center">You have no items in the wishlist</h2>
       )}
       {wishlist.map((product) => {
-        <WishlistCard key={product._id} product={product} />;
+        return <WishlistCard key={product._id} product={product} />;
       })}
     </main>
   );
