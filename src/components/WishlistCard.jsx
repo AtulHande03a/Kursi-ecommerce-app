@@ -1,6 +1,5 @@
 import { useCart } from "contexts/cart-context";
 import React from "react";
-import { toast } from "react-toastify";
 
 export const WishlistCard = ({ product }) => {
   const {
@@ -15,7 +14,6 @@ export const WishlistCard = ({ product }) => {
       type: "REMOVE_FROM_WISHLIST",
       payload: id,
     });
-    // toast.success(<div>Removed from Wishlist</div>);
   };
 
   const moveToCart = (product) => {
@@ -39,7 +37,6 @@ export const WishlistCard = ({ product }) => {
         payload: product,
       });
     }
-    // toast.success(<div>Moved to Cart</div>);
   };
 
   return (
@@ -72,7 +69,10 @@ export const WishlistCard = ({ product }) => {
             Ships in <b> {product.shipsIn} day</b>
           </span>
         </div>
-        <button className="card-buy-btn" onClick={() => moveToCart(product)}>
+        <button
+          className="card-buy-btn mb-0-5"
+          onClick={() => moveToCart(product)}
+        >
           Move to Cart
         </button>
         <button

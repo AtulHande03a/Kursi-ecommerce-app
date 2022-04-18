@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-// import { Link } from "react-router-dom";
+
 import { useCategory } from "contexts/category-context";
 import { useFilter } from "contexts/filter-context";
 
