@@ -4,7 +4,6 @@ import "./styles/styles.css";
 import { ToastContainer, Zoom } from "react-toastify";
 
 const App = () => {
-  console.log("hello");
   return (
     <>
       {/* <ToastContainer
