@@ -1,3 +1,17 @@
-## E-Commerce Backend
+<h1 align="center" font-weight: bold">Kursi Furniture Store</h1>
 
-This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+<p align="center"> 
+<br/> An E-commerce website for your mordern furniture need.  </p>
+
+---
+
+## v1 :
+
+- Basic Homepage with categories to choose from
+- Product listing page with filters
+- Cart Management
+- Wishlist Management
+
+---
+                 
+                 
