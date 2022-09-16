@@ -28,9 +28,7 @@ Let's connect and talk about development, music, books and much more 🌠!
 
 <br />
 
-## Acknowledgements
 
- - [Harsh Pathak](https://www.youtube.com/c/HarshPathakNV)
  
 
 
